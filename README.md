@@ -15,6 +15,18 @@ Open the "For Windows" folder and double-click:
 
 Start Tracker - Windows.bat
 
+Command line
+------------
+You can also launch the tracker from a command line.
+
+On Windows Command Prompt, open this folder and run:
+
+python "Supervision Tracker.pyz"
+
+On Mac Terminal, open this folder and run:
+
+python3 "Supervision Tracker.pyz"
+
 What happens
 ------------
 The launcher checks Python, checks the blank data files, starts the tracker,
