@@ -1,7 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")/.."
 
-APP_URL="http://127.0.0.1:8000"
 APP_FILE="Supervision Tracker.pyz"
 
 echo "========================================"
@@ -42,16 +41,9 @@ if [ ! -f "data/meetings.csv" ]; then
 fi
 
 echo "Starting tracker..."
-python3 "$APP_FILE" &
-SERVER_PID=$!
-
-sleep 2
-echo "Opening $APP_URL"
-open "$APP_URL"
-
 echo
 echo "Keep this window open while using the tracker."
 echo "Press Control+C here to stop it."
 echo
 
-wait "$SERVER_PID"
+python3 "$APP_FILE"

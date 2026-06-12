@@ -1,7 +1,6 @@
 @echo off
 cd /d "%~dp0\.."
 
-set APP_URL=http://127.0.0.1:8000
 set APP_FILE=Supervision Tracker.pyz
 
 echo ========================================
@@ -11,8 +10,8 @@ echo.
 echo This launcher will:
 echo 1. Check Python is available.
 echo 2. Check the tracker data files.
-echo 3. Open the tracker in your default browser.
-echo 4. Start the local tracker.
+echo 3. Start the local tracker.
+echo 4. Open the tracker in your default browser.
 echo.
 
 where python >nul 2>nul
@@ -41,9 +40,6 @@ if not exist "data\students.csv" (
 if not exist "data\meetings.csv" (
   echo meeting_id,student_id,date,mode,attendance,issue,next_action,notes> "data\meetings.csv"
 )
-
-echo Opening %APP_URL%
-start "" "%APP_URL%"
 
 echo.
 echo Starting tracker...
